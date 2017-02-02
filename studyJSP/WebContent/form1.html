@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+function valida()
+{
+	var i = document.testeForm.nome.value.length;
+	
+	if (i<=5)
+	{
+		alert("Nome precisa ser maior que 5!");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	
+}
+
+</script>
+
+<meta charset="UTF-8">
+<title>Teste Form</title>
+</head>
+
+<body style="background-color: white;"> 
+<form autocomplete="on" method="post" action="controllerTesteForm.jsp" name="testeForm" onsubmit="return valida()">
+<span style="font-weight: bold;"><label form="testeForm">Nome:</label> </span>
+        <input autocomplete="on" maxlength="255" size="50" required
+         name="nome" type="text"><br>
+      <strong><label form="testeForm">EMAIL:</label></strong><span style="font-weight: bold;"><input
+          autocomplete="on" size="50" required name="email"
+          type="email"><br>
+        <label form="testeForm">SEXO:</label><input checked="checked" 
+          value="masculino" name="sexo" type="radio">MASCULINO<input  value="feminino"
+          name="sexo" type="radio">FEMININO<br>
+        <label form="testeForm">Línguas:</label><input name="lingua"
+          type="checkbox" value="portugues">Portugûes<input  name="lingua" type="checkbox" value="ingles">Inglês<br>
+        <label form="testeForm">País:</label>
+      </span><span style="font-weight: bold;">
+        <select  name="pais">
+          <option value="brasil">Brasil</option>
+          <option value="japao">Japão</option>
+        </select>
+        <br>
+         <input value="Manda ver!" name="submitButton" type="submit"><br>
+   
+   
+   
+   
+   
+     </body>
+
+</html>
